@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Cart</title>
+  <link rel="stylesheet" href="jj.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="brand"><a href="home.html">
+    <div class="brand"><a href="home.html"><p class="sweet chips"><span style="color:forestgreen;">🍟S</span><span style="color:rgb(189, 219, 56);">W</span><span style="color: rgb(255, 153, 0);">E</span><span style="color: rgb(255, 47, 47);">E</span><span style="color: rgb(212, 71, 113)">T</span>   
+</span><span style="color:rgb(247, 95, 103);">C</span><span style="color:rgb(253, 127, 133);">H</span><span style="color:rgb(189, 219, 56);">I</span><span style="color: rgb(255, 153, 0);">P</span><span style="color:rgb(14, 240, 14);">S</span></a></div></a></div>
+    <nav class="top-nav">
+      <a href="home.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="cart.html">Cart</a>
+      <a href="account.html">Account</a>
+    </nav>
+    <button class="nav-toggle">☰</button>
+  </header>
+
+
+  <!-- Cart Section -->
+  <div class="container">
+    <h1>Your Cart 🛒</h1>
+    <p class="cart-subtitle">These are the items you’ve added to your order.</p>
+
+    <div class="cart-items">
+
+      <!-- Item 1 -->
+      <div class="cart-item">
+        <div class="cart-details">
+          <h2>Cheese Burger</h2>
+          <p>Qty: 2</p>
+        </div>
+        <div class="cart-price">₦7,000</div>
+        <button class="remove-btn">❌</button>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="cart-item">
+        <div class="cart-details">
+          <h2>Fresh Juice</h2>
+          <p>Qty: 1</p>
+        </div>
+        <div class="cart-price">₦1,200</div>
+        <button class="remove-btn">❌</button>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="cart-item">
+        <div class="cart-details">
+          <h2>Chicken Shawarma</h2>
+          <p>Qty: 1</p>
+        </div>
+        <div class="cart-price">₦2,800</div>
+        <button class="remove-btn">❌</button>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="cart-item">
+        <div class="cart-details">
+          <h2>Chocolate Cake</h2>
+          <p>Qty: 1</p>
+        </div>
+        <div class="cart-price">₦2,000</div>
+        <button class="remove-btn">❌</button>
+      </div>
+
+    </div>
+
+    <!-- Cart Summary -->
+    <div class="cart-summary">
+      <p><strong>Total:</strong> ₦13,000</p>
+      <a href="order.html" class="btn checkout-btn">Proceed to Order</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>© 2025 Sweet chips. All rights reserved.</p>
+  </footer>
+
+  <!-- Simple Remove Functionality -->
+  <script>
+    const removeButtons = document.querySelectorAll(".remove-btn");
+    removeButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        button.parentElement.remove();
+      });
+    });
+  </script>
+
+</body>
+</html>

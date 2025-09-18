@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="jj.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    /* Navbar */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    header .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #e63946;
+    }
+
+    header nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    header nav a:hover {
+      color: #e63946;
+    }
+
+    /* Main Layout */
+    .container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .checkout-section {
+      padding: 15px;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      font-size: 24px;
+      color: #222;
+    }
+
+    label {
+      display: block;
+      margin: 8px 0 5px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    /* Order Summary */
+    .order-summary {
+      background: #f1f1f1;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .order-summary h3 {
+      margin-bottom: 15px;
+      font-size: 20px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    .order-summary ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 15px;
+    }
+
+    .order-summary ul li {
+      display: flex;
+      justify-content: space-between;
+      margin: 8px 0;
+    }
+
+    .total {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #0056b3;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="brand"><a href="home.html">
+    <div class="brand"><a href="home.html"><p class="sweet chips"><span style="color:forestgreen;">🍟S</span><span style="color:rgb(189, 219, 56);">W</span><span style="color: rgb(255, 153, 0);">E</span><span style="color: rgb(255, 47, 47);">E</span><span style="color: rgb(212, 71, 113)">T</span>   
+</span><span style="color:rgb(247, 95, 103);">C</span><span style="color:rgb(253, 127, 133);">H</span><span style="color:rgb(189, 219, 56);">I</span><span style="color: rgb(255, 153, 0);">P</span><span style="color:rgb(14, 240, 14);">S</span></a></div></a></div>
+    <nav class="top-nav">
+      <a href="home.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="cart.html">Cart</a>
+      <a href="account.html">Account</a>
+    </nav>
+    <button class="nav-toggle">☰</button>
+  </header>
+
+
+  <!-- Main Checkout -->
+  <div class="container">
+    <!-- Left Side -->
+    <div class="checkout-section">
+      <h2>Checkout</h2>
+
+      <h3>Shipping Information</h3>
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter your name">
+
+      <label>Address</label>
+      <input type="text" placeholder="Enter your address">
+
+      <label>City</label>
+      <input type="text" placeholder="Enter your city">
+
+      <label>Postal Code</label>
+      <input type="text" placeholder="Enter postal code">
+
+      <h3>Payment Information</h3>
+      <label>Card Number</label>
+      <input type="text" placeholder="1234 5678 9012 3456">
+
+      <label>Expiry Date</label>
+      <input type="text" placeholder="MM/YY">
+
+      <label>CVV</label>
+      <input type="text" placeholder="123">
+    </div>
+
+    <!-- Right Side -->
+    <div class="order-summary">
+      <h3>Order Summary</h3>
+      <ul>
+        <li><span>Cheese Pizza (x1)</span> <span>$8.00</span></li>
+        <li><span>Fries (x2)</span> <span>$12.00</span></li>
+        <li><span>Burger (x1)</span> <span>$8.50</span></li>
+      </ul>
+      <p>Subtotal: $28.50</p>
+      <p>Tax: $5.50</p>
+      <p>Shipping: $8.00</p>
+      <p class="total">Total: $42.00</p>
+      <button type="submit" class="btn" > <a href="mmm.html">Proceed to get</a></button>
+    </div>
+  </div>
+
+
+    <!-- Footer -->
+  <footer class="site-footer">
+    <p>© 2025 sweet chips. All Rights Reserved.</p>
+    <p><a href="menu.html">Order Now</a> | <a href="account.html">My Account</a> | <a href="cart.html">View Cart</a></p>
+  </footer>
+
+</body>
+</html>
